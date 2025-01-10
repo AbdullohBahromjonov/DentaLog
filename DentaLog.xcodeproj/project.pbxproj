@@ -8,17 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		3BBAEA6C2D303F3200EF8C24 /* DentaLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA6B2D303F3200EF8C24 /* DentaLogApp.swift */; };
-		3BBAEA6E2D303F3300EF8C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA6D2D303F3300EF8C24 /* ContentView.swift */; };
 		3BBAEA702D303F3400EF8C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BBAEA6F2D303F3400EF8C24 /* Assets.xcassets */; };
 		3BBAEA732D303F3400EF8C24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BBAEA722D303F3400EF8C24 /* Preview Assets.xcassets */; };
+		3BBAEA7A2D30459500EF8C24 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA792D30459500EF8C24 /* HomeScreen.swift */; };
+		3BBAEA7C2D30524100EF8C24 /* AppointmentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA7B2D30524000EF8C24 /* AppointmentCardView.swift */; };
+		3BBAEA7E2D3055D600EF8C24 /* DailyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA7D2D3055D600EF8C24 /* DailyInfoView.swift */; };
+		3BBAEA802D30572600EF8C24 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA7F2D30572600EF8C24 /* HomeViewModel.swift */; };
+		3BBAEA822D305A0A00EF8C24 /* AppointmentStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA812D305A0A00EF8C24 /* AppointmentStat.swift */; };
+		3BBAEA842D305A1F00EF8C24 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA832D305A1F00EF8C24 /* Gender.swift */; };
+		3BBAEA862D305A3300EF8C24 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA852D305A3300EF8C24 /* Appointment.swift */; };
+		3BBAEA882D305A4400EF8C24 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA872D305A4400EF8C24 /* Patient.swift */; };
+		3BBAEA8A2D305ACD00EF8C24 /* Treatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA892D305ACD00EF8C24 /* Treatment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BBAEA682D303F3200EF8C24 /* DentaLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DentaLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBAEA6B2D303F3200EF8C24 /* DentaLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentaLogApp.swift; sourceTree = "<group>"; };
-		3BBAEA6D2D303F3300EF8C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3BBAEA6F2D303F3400EF8C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BBAEA722D303F3400EF8C24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3BBAEA792D30459500EF8C24 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		3BBAEA7B2D30524000EF8C24 /* AppointmentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCardView.swift; sourceTree = "<group>"; };
+		3BBAEA7D2D3055D600EF8C24 /* DailyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyInfoView.swift; sourceTree = "<group>"; };
+		3BBAEA7F2D30572600EF8C24 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3BBAEA812D305A0A00EF8C24 /* AppointmentStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentStat.swift; sourceTree = "<group>"; };
+		3BBAEA832D305A1F00EF8C24 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		3BBAEA852D305A3300EF8C24 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		3BBAEA872D305A4400EF8C24 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		3BBAEA892D305ACD00EF8C24 /* Treatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treatment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +68,15 @@
 			isa = PBXGroup;
 			children = (
 				3BBAEA6B2D303F3200EF8C24 /* DentaLogApp.swift */,
-				3BBAEA6D2D303F3300EF8C24 /* ContentView.swift */,
+				3BBAEA7F2D30572600EF8C24 /* HomeViewModel.swift */,
+				3BBAEA852D305A3300EF8C24 /* Appointment.swift */,
+				3BBAEA892D305ACD00EF8C24 /* Treatment.swift */,
+				3BBAEA872D305A4400EF8C24 /* Patient.swift */,
+				3BBAEA812D305A0A00EF8C24 /* AppointmentStat.swift */,
+				3BBAEA832D305A1F00EF8C24 /* Gender.swift */,
+				3BBAEA792D30459500EF8C24 /* HomeScreen.swift */,
+				3BBAEA7D2D3055D600EF8C24 /* DailyInfoView.swift */,
+				3BBAEA7B2D30524000EF8C24 /* AppointmentCardView.swift */,
 				3BBAEA6F2D303F3400EF8C24 /* Assets.xcassets */,
 				3BBAEA712D303F3400EF8C24 /* Preview Content */,
 			);
@@ -137,8 +161,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BBAEA6E2D303F3300EF8C24 /* ContentView.swift in Sources */,
+				3BBAEA7E2D3055D600EF8C24 /* DailyInfoView.swift in Sources */,
 				3BBAEA6C2D303F3200EF8C24 /* DentaLogApp.swift in Sources */,
+				3BBAEA882D305A4400EF8C24 /* Patient.swift in Sources */,
+				3BBAEA7A2D30459500EF8C24 /* HomeScreen.swift in Sources */,
+				3BBAEA862D305A3300EF8C24 /* Appointment.swift in Sources */,
+				3BBAEA802D30572600EF8C24 /* HomeViewModel.swift in Sources */,
+				3BBAEA7C2D30524100EF8C24 /* AppointmentCardView.swift in Sources */,
+				3BBAEA822D305A0A00EF8C24 /* AppointmentStat.swift in Sources */,
+				3BBAEA8A2D305ACD00EF8C24 /* Treatment.swift in Sources */,
+				3BBAEA842D305A1F00EF8C24 /* Gender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
