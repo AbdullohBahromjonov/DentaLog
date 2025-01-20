@@ -43,8 +43,7 @@ struct DailyInfoView: View {
         .font(.system(size: 12))
         .padding()
         .background(Color.Denta.secondary)
-        .cornerRadius(12)
-        .padding()
+        .cornerRadius(20)
     }
 }
 
@@ -54,5 +53,6 @@ struct DailyInfoView: View {
             .ignoresSafeArea()
         
         DailyInfoView()
+            .padding()
     }
 }
