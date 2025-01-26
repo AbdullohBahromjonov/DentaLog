@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B286D432D4588A9001D8B33 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B286D422D4588A9001D8B33 /* Color+Ext.swift */; };
 		3B591BB02D33FD32000119DC /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B591BAF2D33FD32000119DC /* MainScreen.swift */; };
 		3B591BB32D33FE5B000119DC /* PatientsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B591BB22D33FE5B000119DC /* PatientsScreen.swift */; };
 		3BBAEA6C2D303F3200EF8C24 /* DentaLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAEA6B2D303F3200EF8C24 /* DentaLogApp.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B286D422D4588A9001D8B33 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		3B591BAF2D33FD32000119DC /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		3B591BB22D33FE5B000119DC /* PatientsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsScreen.swift; sourceTree = "<group>"; };
 		3BBAEA682D303F3200EF8C24 /* DentaLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DentaLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				3BBAEA6B2D303F3200EF8C24 /* DentaLogApp.swift */,
+				3B286D422D4588A9001D8B33 /* Color+Ext.swift */,
 				3BBAEA7F2D30572600EF8C24 /* HomeViewModel.swift */,
 				3B591BAD2D33FCB8000119DC /* Model */,
 				3B591BAE2D33FCEB000119DC /* Sreens */,
@@ -195,6 +198,7 @@
 				3BBAEA6C2D303F3200EF8C24 /* DentaLogApp.swift in Sources */,
 				3BBAEA882D305A4400EF8C24 /* Patient.swift in Sources */,
 				3B591BB02D33FD32000119DC /* MainScreen.swift in Sources */,
+				3B286D432D4588A9001D8B33 /* Color+Ext.swift in Sources */,
 				3BBAEA7A2D30459500EF8C24 /* HomeScreen.swift in Sources */,
 				3BBAEA862D305A3300EF8C24 /* Appointment.swift in Sources */,
 				3BBAEA802D30572600EF8C24 /* HomeViewModel.swift in Sources */,

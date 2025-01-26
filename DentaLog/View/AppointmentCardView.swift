@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct AppointmentCardView: View {
+    let appointment: Appointment
+    
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 5) {
-                Text("Abdulloh Bahromjonov")
+                Text("\(appointment.patient.name) \(appointment.patient.surname)")
                     .font(.system(size: 14))
                 
-                Text("Composite Filling – Upper Left Second Molar (Tooth #14)")
+                Text(appointment.treatment)
                     .font(.system(size: 10))
                     .frame(width: UIScreen.main.bounds.size.width/2, alignment: .leading)
             }
@@ -22,17 +24,17 @@ struct AppointmentCardView: View {
             Spacer()
             
             VStack(alignment: .trailing, spacing: 5) {
-                Text("09:30")
+                Text(appointment.time)
                     .font(.system(size: 16, weight: .bold))
                 
-                Text("NEW")
+                Text(appointment.state.name)
                     .foregroundColor(.white)
                     .font(.system(size: 10, weight: .bold))
                     .padding(5)
                     .padding(.horizontal, 5)
                     .background(
                         Capsule()
-                            .foregroundColor(.accent)
+                            .foregroundColor(appointment.state.color)
                     )
             }
         }
@@ -49,7 +51,15 @@ struct AppointmentCardView: View {
         Color.Denta.primary
             .ignoresSafeArea()
         
-        AppointmentCardView()
+        AppointmentCardView(
+            appointment: Appointment(
+                patient: Patient(name: "Abdulloh", surname: "Bahromjonov", phoneNumber: "+998 93 591 09 70", gender: .male),
+                state: .done,
+                treatment: "Composite Filling – Upper Left Second Molar (Tooth #14)",
+                time: "9:30",
+                date: Date()
+            )
+        )
             .padding()
     }
 }

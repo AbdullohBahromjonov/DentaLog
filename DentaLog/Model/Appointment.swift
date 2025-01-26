@@ -9,7 +9,9 @@ import Foundation
 
 struct Appointment: Identifiable {
     let id = UUID()
-    let state: String
+    let patient: Patient
+    let state: AppointmentState
     let treatment: String
+    let time: String
     let date: Date
 }

@@ -12,12 +12,11 @@ struct DailyInfoView: View {
         VStack(spacing: 10) {
             HStack {
                 Text("Appointments:")
-                Text("10")
-                    .fontWeight(.bold)
                 
                 Spacer()
                 
-                Text("December 31, 2024")
+                Text("10")
+                    .fontWeight(.bold)
             }
             
             Divider()

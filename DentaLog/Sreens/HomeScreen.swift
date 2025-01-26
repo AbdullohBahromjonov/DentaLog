@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @StateObject var viewModel = HomeViewModel()
     
     enum WeekDays: Int, CaseIterable, Identifiable {
         case monday
@@ -40,6 +41,12 @@ struct HomeScreen: View {
         }
     }
     
+    var dateFormatter = DateFormatter()
+    
+    init() {
+        dateFormatter.dateFormat = "MMMM yyyy"
+    }
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -48,56 +55,62 @@ struct HomeScreen: View {
                 
                 VStack(spacing: 0) {
                     VStack {
-                        HStack {
-                            ForEach(WeekDays.allCases) { day in
-                                VStack(spacing: 20) {
-                                    Text(day.name)
-                                        .font(.system(size: 12))
-                                    Text("\(day.rawValue + 1)")
-                                        .font(.system(size: 16, weight: .bold))
+                        VStack {
+                            HStack(alignment: .bottom) {
+                                Text(dateFormatter.string(from: Date()))
+                                    .font(.system(size: 20, weight: .bold))
+                                
+                                Spacer()
+                                
+                                Text("Appointments: \(viewModel.appointmentsByDate.count)")
+                                    .font(.system(size: 14, weight: .semibold))
+                            }
+                            
+                            Divider()
+                            
+                            HStack {
+                                ForEach(WeekDays.allCases) { day in
+                                    VStack(spacing: 20) {
+                                        Text(day.name)
+                                            .font(.system(size: 12))
+                                        Text("\(day.rawValue + 1)")
+                                            .font(.system(size: 16, weight: .bold))
+                                    }
+                                    .foregroundColor(day.id == 2 ? .white : Color(uiColor: .darkText))
+                                    .padding(.vertical, 10)
+                                    .frame(maxWidth: .infinity)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .foregroundColor(day.id == 2 ? .Denta.accent : .clear)
+                                    )
                                 }
-                                .foregroundColor(day.id == 2 ? .white : Color(uiColor: .darkText))
-                                .padding(.vertical, 10)
-                                .frame(maxWidth: .infinity)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .foregroundColor(day.id == 2 ? .Denta.accent : .clear)
-                                )
                             }
                         }
                         .padding()
                         .background(Color.Denta.secondary)
                         .cornerRadius(20)
-                        
-                        DailyInfoView()
                     }
                     .padding()
                     
                     Divider()
                     
                     ScrollView(showsIndicators: false) {
-                        ForEach(1...10, id: \.self) { _ in
-                            AppointmentCardView()
+                        ForEach(viewModel.appointmentsByDate) { appointment in
+                            AppointmentCardView(appointment: appointment)
                         }
                         .padding()
                     }
                 }
-                .shadow(color: .gray.opacity(0.2), radius: 10)
+            }
+            .task {
+                viewModel.getAppointmentsBy(date: Date())
             }
         }
+        .environmentObject(viewModel)
     }
 }
 
 #Preview {
     HomeScreen()
-}
-
-extension Color {
-    enum Denta {
-        static let primary = Color("Primary")
-        static let secondary = Color("Secondary")
-        static let accent = Color("Accent")
-        static let green = Color("Green")
-        static let red = Color("Red")
-    }
+        .environmentObject(HomeViewModel())
 }
